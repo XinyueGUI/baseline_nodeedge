@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .vl {
+          border-left: 6px solid green;
+          height: 200%;
+          position: absolute;
+          left: 48%;
+          margin-left: -3px;
+          top: 2%;
+        }
+
+        .half{
+        float: left;
+	    width:47%;
+	    margin-top: 3%;
+	    margin-right: 2%;    
+        }
+
+        #myVideo { 
+        width: 95%;
+        margin-left: 2%;
+        }
+
+        .box {
+        float: left;
+        bottom: 1%;
+        background: rgba(146, 144, 49, 0.5);
+        color: black;
+        margin: 1%;
+        width: 25%;
+        height: 20%;
+        padding: 1%;
+  }
+
+      
+        </style>
+
+        
+</head>
+<body>
+    <div class='half' style="background-color:gray;">
+     <h2>Baseline UI for Power System Collapse Phenomenon and analysis Visualization</h2>  
+     <video  controls style = "margin-left: 1%; width: 57%;float: left; margin-bottom: 3%;">
+      <source src="Baseline Bar Chart.mp4" type="video/mp4"> 
+      Your browser does not support the video tag.
+    </video><br>
+    <img src="Model.png" alt="NLI" style="width:40%; margin-left: 1%; ">
+
+      <img src="NLI.png" alt="NLI" style="width:90%; margin-left: 5%; margin-bottom: 5%; ">
+      <img src="Real Power.png" alt="NLI" style="width:90%; margin-left: 5%; margin-bottom: 5%; ">
+      <img src="Voltage.png" alt="NLI" style="width:90%; margin-left: 5%;  margin-bottom: 5%;">
+      </div>
+
+	  
+    
+    <div class="vl"></div>
+
+    <div class='half' style="background-color:gray; ">
+        <h2>Node-Edge UI for Power System Collapse Phenomenon and Analysis Visualization</h2>  
+        <video id="myVideo" controls>
+           <source src="Node_Edge UI.mp4" type="video/mp4"> 
+           Your browser does not support the video tag.
+         </video>
+
+         <div class="box">
+            <button onclick="setCurTime1()" type="button"> <b>Button One: </b>The disturbance commit.</button>
+          </div>
+          
+          <div class="box">
+            <button onclick="setCurTime2()" type="button"> <b>Button Two: </b>The collapse start.</button>
+          </div>
+
+          <div class="box">
+            <button onclick="setCurTime3()" type="button"> <b>Button Three: </b>The collapse becomes serious.</button>
+          </div>
+          
+          <div class="box">
+            <button onclick="setCurTime4()" type="button"> <b>Button Four: </b>The collapse nearly complete.</button>
+          </div>
+          
+          <div class="box">
+            <button onclick="setCurTime5()" type="button"> <b>Button Five: </b>The blackout occur.</button>
+          </div>
+
+
+          <video  controls  style="width:90%; margin-left: 5%; margin-top: 3%; margin-bottom: 3%;" >
+            <source src="V3.mp4" type="video/mp4"> 
+            Your browser does not support the video tag.
+          </video>
+      </div>
+
+
+      <script>
+        let x = document.getElementById("myVideo");
+        
+        function setCurTime1() { 
+          x.currentTime = 1;
+        } 
+        
+        function setCurTime2() { 
+          x.currentTime = 99;
+        } 
+
+        function setCurTime3() { 
+            x.currentTime = 129;
+          } 
+          
+          function setCurTime4() { 
+            x.currentTime = 149;
+          } 
+          
+          function setCurTime5() { 
+            x.currentTime = 167;
+          } 
+        </script>
+</body>
+</html>
